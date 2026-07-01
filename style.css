@@ -1,0 +1,168 @@
+body {
+  background-color: #f7f4f0;
+}
+
+/* Type buttons */
+.type-btn {
+  text-transform: capitalize;
+}
+
+.type-btn.active {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* Recipe card */
+.recipe-card {
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+}
+
+.recipe-card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* ===== Recipe modal ===== */
+
+.recipe-modal-content {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  padding: 8px;
+  opacity: 1;
+}
+
+/* Hero image with dark gradient + title on top */
+.modal-hero {
+  position: relative;
+  height: 260px;
+}
+
+.modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.modal-hero-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 24px;
+  color: #fff;
+  z-index: 2;
+}
+
+.modal-hero-title h3 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.modal-hero-title p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+/* Meta badges: servings / cooking time */
+.recipe-meta {
+  display: flex;
+  gap: 10px;
+  padding: 18px 24px 0;
+}
+
+.recipe-meta .meta-pill {
+  background-color: #f1efe9;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recipe-meta .meta-pill strong {
+  color: #212529;
+}
+
+/* Section body padding */
+.modal-section {
+  padding: 20px 24px;
+}
+
+.modal-section h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+  margin-bottom: 14px;
+}
+
+/* Ingredients list inside modal */
+.ingredient-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+
+@media (max-width: 576px) {
+  .ingredient-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ingredient-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.92rem;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e6e2da;
+}
+
+.ingredient-list li::before {
+  content: "✓";
+  color: #198754;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.btn-recipe-source {
+  background-color: #212529;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-weight: 600;
+}
+
+.btn-recipe-source:hover {
+  background-color: #000;
+  color: #fff;
+}
